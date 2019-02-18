@@ -3,6 +3,10 @@ class GeometricFigure {
         this.x = x;
         this.y = y;
     }
+    
+    toString() {
+        return '(' + this.x + ', ' + this.y + ')';
+    }
     // get point() {
     //     return '(' + this.x + ', ' + this.y + ')';
     // }
@@ -13,12 +17,17 @@ class Circle extends GeometricFigure {
   constructor(x, y, radius) {
         super(x, y);
         this.radius = radius;
+        
+        
 }
-        getCircumference() {
-           return 2 * Math.PI * this.radius;
-}
+ toString() {
+        return super.toString() + ', ' + this.radius;
+    }
+//         getCircleArena() {
+//           return 2 * Math.PI * this.radius;
+// }
 }
 
 let c = new Circle(2, 4, 5);
 alert(c);
-alert(c.getCircumference());
+alert(c.getCircleArena());
